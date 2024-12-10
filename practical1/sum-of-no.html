@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Demo</title>
+    <script type="text/JavaScript">
+        function calcSum() {
+            value1=parseInt(document.mainframe.textBox1.value);
+            value2=parseInt(document.mainframe.textBox2.value);
+
+            sum = value1 + value2;
+            document.mainframe.textBoxsum.value = sum;
+        }
+    </script>
+
+</head>
+<body>
+    <form name="mainframe">
+        <input type="number" value="Num1" name="textBox1"/><br><br>
+        <input type="number" value="Num2" name="textBox2"/><br><br>
+        <input type="button" value="process" onclick="javaScript: calcSum()"/>
+        <input type="text" name="textBoxsum" readonly="readonly"/>
+    </form>
+</body>
+</html>

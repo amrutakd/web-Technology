@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Bank</title>
+    <link rel="stylesheet" href="bank.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Secure Bank</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="banner">
+        <div class="banner-text">
+            <h2>Welcome to Secure Bank</h2>
+            <p>Your trusted partner in financial services.</p>
+            <a href="#services" class="btn">Explore Services</a>
+        </div>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service" onclick="showAlert('Online Banking')">
+                <h3>Online Banking</h3>
+                <a href="details">Details about </a>
+                <p>Manage your accounts from anywhere, anytime.</p>
+            </div>
+            <div class="service" onclick="showAlert('Loans')">
+                <h3>Loans</h3>
+                <p>Flexible loans tailored to your needs.</p>
+            </div>
+            <div class="service" onclick="showAlert('Investments')">
+                <h3>Investments</h3>
+                <p>Grow your wealth with our expert guidance.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1> CONTACT US</h1>
+        <a href="contact.html">CONTACT US</a>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Secure Bank has been providing reliable financial solutions for over 25 years. Our mission is to empower our customers with the best tools for financial success.</p>
+    </section>
+    <footer>
+        <p>© 2024 Secure Bank. All rights reserved.</p>
+    </footer>
+    <script src="bank.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Basic Operation Calculator</title>
+    </head>
+    <body>
+        <h1>Basic Calculator</h1>
+        <input type="number" id="num1">
+        <input type="number" id="num2"><br><br>
+
+        <button onclick="performOperation('+')">Add(+)</button>
+        <button onclick="performOperation('-')">Stutract(-)</button>
+        <button onclick="performOperation('*')">Multiply(*)</button>
+        <button onclick="performOperation('/')">Divide(/)</button>
+        <h3 id="result">Result:</h3>
+
+        <script>
+            function performOperation(operator){
+                const num1=parseFloat(document.getElementById('num1').value);
+                const num2=parseFloat(document.getElementById('num2').value);
+
+                //Check if Number is valid
+                if(isNaN(num1)||isNaN(num2)){
+                    alert("please enter valid number");
+                    return false;
+                }
+                let result;
+
+                //perform the selected operation
+                switch(operator){
+                    case '+':
+                        
+                            result=num1+num2;
+                        
+                        break;
+                    
+                    case '-':
+                        
+                            result=num1-num2;
+                        
+                        break;
+
+                    case '*':
+                        
+                            result=num1*num2;
+                        
+                        break;
+
+                    case '/':
+                        if(num2===0)
+                        {
+                            alert("Division by 0 is not possible");
+                            return;
+                        }
+                        result=num1/num2;
+                        break;
+                }
+                document.getElementById('result').textContent="Result: "+result;
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form id="registrationForm">
+        <h1>Student Registration Form</h1>
+        <table>
+            <tr>
+                <td><label for="username">Enter Username:</label></td>
+                <td><input type="text" id="username" name="username"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Enter Password:</label></td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><label for="age">Enter Your Age:</label></td>
+                <td><input type="number" id="age" name="age"></td>
+            </tr>
+            <tr>
+                <td><label for="Address">Enter Address:</label></td>
+                <td><textarea rows="5" cols="20" id="Address" name="Address"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="DOB">Enter DOB:</label></td>
+                <td><input type="date" id="DOB" name="DOB"></td>
+            </tr>
+            <tr>
+                <td><label for="Course">Select Course:</label></td>
+                <td>
+                    <input type="checkbox" id="JCourse" name="Course" value="JAVA">JAVA
+                    <input type="checkbox" id="PCourse" name="Course" value="PYTHON">PYTHON
+                    <input type="checkbox" id="RCourse" name="Course" value="REACTJS">REACTJS
+                    <input type="checkbox" id="ACourse" name="Course" value="ANGULAR">ANGULAR
+                    <input type="checkbox" id="NCourse" name="Course" value=".NET">.NET
+                </td>
+            </tr>
+            <tr>
+                <td><label for="Gender">Select Gender:</label></td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="Male">Male
+                    <input type="radio" id="female" name="gender" value="Female">Female
+                    <input type="radio" id="other" name="gender" value="Other">Other
+                </td>
+            </tr>
+            <tr>
+                <td><label for="Qualification">Select Qualification:</label></td>
+                <td>
+                    <select id="Qualification" name="Qualification">
+                        <option value="">--Select--</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="B.Pharm">B.Pharm</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="M.Pharm">M.Pharm</option>
+                        <option value="MBA">MBA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="file">Upload File:</label></td>
+                <td><input type="file" id="file" name="file"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit">SUBMIT</button>
+                    <button type="reset">RESET</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>
