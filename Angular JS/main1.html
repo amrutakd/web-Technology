@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Include File</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="mainApp" ng-controller="studentCtrl">
+        <div ng-include="'main.html'"></div> <!-- Corrected ng-include syntax -->
+        <script>
+            var mainApp = angular.module("mainApp", []); // Fixed module name case
+            mainApp.controller("studentCtrl", function ($scope) {
+                $scope.student = {
+                    firstName: "Mahesh",
+                    lastName: "Kadam",
+                    fullName: function () {
+                        return this.firstName + " " + this.lastName; // Use 'this' for correct context
+                    }
+                };
+            });
+        </script>
+    </div>
+
+</body>
+</html>

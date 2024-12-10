@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Filters Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="">
+        <h1>AngularJS Filters</h1>
+        
+        <!-- Uppercase Filter -->
+        <p>Uppercase: {{ 'angular Uppercase filters ' | uppercase }}</p>
+        
+        <!-- Lowercase Filter -->
+        <p>Lowercase: {{ 'Angular Lowercase Filters ' | lowercase }}</p>
+        
+        <!-- Currency Filter -->
+        <p>Currency (Default): {{ 1234.56 | currency }}</p>
+        <p>Currency (Custom): {{ 1234.56 | currency:'₹' }}</p>
+    </div>
+</body>
+</html>

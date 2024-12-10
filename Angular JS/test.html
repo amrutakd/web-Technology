@@ -1,0 +1,24 @@
+<html ng-app="todoApp">
+    <head>
+        <title>To do list</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    </head>
+    <body>
+        <div class="container" ng-controller="todocontroller">
+            <form ng-submit="addTask()">
+                <input type="text" ng-model="newTask" placeholder="enter new task" required>
+                <button type="submit">Add Task</button>
+            </form>
+
+            <ol>
+                <li ng-repeat="task in tasks track by $index">
+                    <span ng-hide="task.editing">{{task.text}}</span>
+                    <input type="text" ng-show="task.editing" ng-model="task.text" placeholder="Edit task">
+                    <button ng-click="editTask(task)">{{task.editing ? 'save' : 'Edit'}}</button>
+                    <button ng-click="deleteTask($index)">Delete</button>
+                </li>
+            </ol>
+        </div>
+        <script src="test.js"></script>
+    </body>
+</html>

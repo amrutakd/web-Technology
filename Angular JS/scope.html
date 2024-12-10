@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Scope</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="mainApp">
+    <h1>AngularJS Scope Example</h1>
+
+    <!-- Shape Controller -->
+    <div ng-controller="shapeController">
+        <h2>Shape Controller</h2>
+        <p>{{message}}</p>
+    </div>
+
+    <!-- Circle Controller -->
+    <div ng-controller="circleController">
+        <h2>Circle Controller</h2>
+        <p>{{message}}</p>
+    </div>
+
+    <!-- Square Controller -->
+    <div ng-controller="squareController">
+        <h2>Square Controller</h2>
+        <p>{{message}}</p>
+    </div>
+
+    <script>
+        var mainApp = angular.module('mainApp', []);
+
+        mainApp.controller("shapeController", function($scope) {
+            $scope.message = "In Shape Controller";
+        });
+
+        mainApp.controller("circleController", function($scope) {
+            $scope.message = "In Circle Controller";
+        });
+
+        mainApp.controller("squareController", function($scope) {
+            $scope.message = "In Square Controller";
+        });
+    </script>
+</body>
+</html>

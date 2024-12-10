@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS View</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+</head>
+<body>
+    <div ng-app="mainApp">
+        <p><a href="#!/add1">Add Student</a></p>
+        <p><a href="#!/view1">View Student</a></p>
+        <div ng-view></div>
+        
+        <!-- Templates -->
+        <script type="text/ng-template" id="add">
+            <h2>Add Student</h2>
+            <p>{{message}}</p>
+        </script>
+        <script type="text/ng-template" id="view">
+            <h2>View Student</h2>
+            <p>{{message}}</p>
+        </script>
+    </div>
+
+    <script>
+        // Define AngularJS Application
+        var mainApp = angular.module("mainApp", ['ngRoute']);
+
+        // Configure Routes
+        mainApp.config(['$routeProvider', function($routeProvider) {
+            $routeProvider
+                .when('/add1', {
+                    templateUrl: 'add',
+                    controller: 'AddC'
+                })
+                .when('/view1', {
+                    templateUrl: 'view',
+                    controller: 'ViewC'
+                })
+                .otherwise({
+                    redirectTo: '/add1'
+                });
+        }]);
+
+        // Add Student Controller
+        mainApp.controller('AddC', function($scope) {
+            $scope.message = "This page will be used to display the Add Student form.";
+        });
+
+        // View Student Controller
+        mainApp.controller('ViewC', function($scope) {
+            $scope.message = "This page will be used to display the View Student form.";
+        });
+    </script>
+</body>
+</html>
